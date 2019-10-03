@@ -1,0 +1,16 @@
+<h2>ユーザー登録</h2>
+
+<%= form_tag("auth/create" , method: "post") do %>
+<table>
+  <tr>
+    <td><%= label_tag(:username, "ユーザー名：") %></td>
+    <td><%= text_field_tag(:username) %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag(:password, "パスワード：") %></td>
+    <td><%= text_field_tag(:password) %></td>
+  </tr>
+</table>
+ <%= submit_tag("登録する") %>
+<% end %>
+<a href="<%= auth_login_path%>">アカウントをお持ちの方はこちら</a>
